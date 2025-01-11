@@ -1,0 +1,366 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #000;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+  background: #1a1a1a;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+header .menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+header .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+header .nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+}
+
+header .nav-links li a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  animation: slide-in 0.3s ease forwards;
+}
+
+header .cta-button {
+  background: #fff;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+header .cta-button:hover {
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+@keyframes slide-in {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 2rem;
+  background: #000;
+  animation: fade-in 1s ease;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+#hero p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+#hero .cta-button {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Features Section */
+#features {
+  background: #1a1a1a;
+  padding: 2rem;
+  text-align: center;
+}
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.feature-card {
+  background: #000;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  background: #1a1a1a;
+}
+
+/* Tools Section */
+.tool {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  animation: slide-up 1s ease;
+}
+
+.tool h3 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.tool input,
+.tool textarea,
+.tool button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+}
+
+.tool button {
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tool button:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Productivity Graph */
+#graph canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  background: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  z-index: 5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header .menu-toggle {
+    display: block;
+  }
+
+  header .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    background: #1a1a1a;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  header .nav-links.active {
+    display: flex;
+  }
+
+  .feature-cards {
+    flex-direction: column;
+  }
+
+  #hero h1 {
+    font-size: 2rem;
+  }
+}
+
+
+/* Contact Section */
+#contact {
+  background: #000;
+  padding: 2rem;
+  text-align: center;
+}
+
+#contact h2 {
+  margin-bottom: 1rem;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#contact-form label {
+  color: #fff;
+  display: block;
+  margin-top: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  background: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#contact-form button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contact-form button:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+/* Adjust sizes for specific buttons */
+#add-todo,
+#start-timer,
+#reset-timer,
+#save-note {
+  width: 120px; /* Adjust width */
+  height: 40px; /* Adjust height */
+  font-size: 1rem; /* Adjust font size */
+  border-radius: 10px; /* Optional: rounded corners */
+  padding: 0.5rem;
+}
+
+/* Modify Explore Tools Button */
+.cta-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background: linear-gradient(90deg, #007BFF, #00FFAA); /* Gradient background */
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.1); /* Add a hover effect */
+}
+
+/* Reduce empty spaces for PC screens */
+@media (min-width: 1024px) {
+  #hero {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  #features {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .tool {
+    margin: 0.5rem 0; /* Reduce margin */
+  }
+
+  #timer-history {
+    margin-top: 1rem;
+    background: #1a1a1a;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #333;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  }
+
+  #timer-history h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+  }
+
+  #timer-history ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #timer-history ul li {
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+}

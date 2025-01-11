@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">📈 Productivity App</h1>
+      <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="hero-text">
+        <h1>Boost Your Productivity</h1>
+        <p>Manage tasks, focus better, take notes, and visualize your productivity all in one place.</p>
+        <a href="#tools" class="cta-button">Explore Tools</a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+      <h2>Features</h2>
+      <div class="feature-cards">
+        <div class="feature-card">
+          <i class="fas fa-tasks"></i>
+          <h3>To-Do List</h3>
+          <p>Organize your tasks and stay on track.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-clock"></i>
+          <h3>Timer</h3>
+          <p>Stay focused using a Pomodoro timer.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-sticky-note"></i>
+          <h3>Notes App</h3>
+          <p>Take and organize notes easily.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Productivity Graph</h3>
+          <p>Track your productivity visually.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools">
+      <h2>Productivity Tools</h2>
+
+      <!-- To-Do List -->
+      <div class="tool" id="todo">
+        <h3>To-Do List</h3>
+        <input type="text" id="todo-input" placeholder="Add a task">
+        <button id="add-todo">Add</button>
+        <ul id="todo-list"></ul>
+      </div>
+
+      <!-- Timer -->
+      <div class="tool" id="timer">
+        <h3>Timer</h3>
+        <p id="timer-display">25:00</p>
+        <button id="start-timer">Start</button>
+        <button id="reset-timer">Reset</button>
+      </div>
+
+      <!-- Notes App -->
+      <div class="tool" id="notes">
+        <h3>Notes</h3>
+        <textarea id="note-input" placeholder="Write your note here"></textarea>
+        <button id="save-note">Save Note</button>
+        <div id="notes-list"></div>
+      </div>
+
+      <!-- Productivity Graph -->
+      <div class="tool" id="graph">
+        <h3>Productivity Graph</h3>
+        <canvas id="productivity-chart" width="400" height="200"></canvas>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Productivity App. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
