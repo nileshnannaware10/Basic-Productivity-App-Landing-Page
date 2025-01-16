@@ -8,7 +8,6 @@ A web-based productivity application to help users manage tasks, focus better, t
    - Add, view, and manage tasks.
 2. **Timer**
    - Pomodoro-style timer with start and reset functionality.
-   - Timer history to track previous sessions.
 3. **Notes App**
    - Write and save notes with ease.
 4. **Productivity Graph**
