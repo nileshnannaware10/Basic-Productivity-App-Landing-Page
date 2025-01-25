@@ -20,7 +20,3 @@ A web-based productivity application to help users manage tasks, focus better, t
   - [Font Awesome](https://fontawesome.com/) for icons
   - [Chart.js](https://www.chartjs.org/) for visualizing data
 
-## Responsive Design
-
-- The app adapts to various screen sizes.
-- Reduced spacing and optimized layout for larger screens (e.g., desktops).
