@@ -1,31 +1,26 @@
 // To-Do List
-const todoInput = document.getElementById("todo-input");
-const todoList = document.getElementById("todo-list");
-const addTodoButton = document.getElementById("add-todo");
-
-addTodoButton.addEventListener("click", () => {
+document.getElementById("add-todo").addEventListener("click", () => {
+  let todoInput = document.getElementById("todo-input");
   if (todoInput.value.trim() !== "") {
-    const li = document.createElement("li");
+    let li = document.createElement("li");
     li.textContent = todoInput.value;
-    todoList.appendChild(li);
+    document.getElementById("todo-list").appendChild(li);
     todoInput.value = "";
   }
 });
 
 // Timer
 let timerInterval;
-const timerDisplay = document.getElementById("timer-display");
-const startTimerButton = document.getElementById("start-timer");
-const resetTimerButton = document.getElementById("reset-timer");
 let timeRemaining = 25 * 60;
+const timerDisplay = document.getElementById("timer-display");
 
 function updateTimer() {
-  const minutes = Math.floor(timeRemaining / 60);
-  const seconds = timeRemaining % 60;
+  let minutes = Math.floor(timeRemaining / 60);
+  let seconds = timeRemaining % 60;
   timerDisplay.textContent = `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 }
 
-startTimerButton.addEventListener("click", () => {
+document.getElementById("start-timer").addEventListener("click", () => {
   if (!timerInterval) {
     timerInterval = setInterval(() => {
       if (timeRemaining > 0) {
@@ -39,7 +34,7 @@ startTimerButton.addEventListener("click", () => {
   }
 });
 
-resetTimerButton.addEventListener("click", () => {
+document.getElementById("reset-timer").addEventListener("click", () => {
   clearInterval(timerInterval);
   timerInterval = null;
   timeRemaining = 25 * 60;
@@ -47,15 +42,12 @@ resetTimerButton.addEventListener("click", () => {
 });
 
 // Notes App
-const noteInput = document.getElementById("note-input");
-const saveNoteButton = document.getElementById("save-note");
-const notesList = document.getElementById("notes-list");
-
-saveNoteButton.addEventListener("click", () => {
+document.getElementById("save-note").addEventListener("click", () => {
+  let noteInput = document.getElementById("note-input");
   if (noteInput.value.trim() !== "") {
-    const p = document.createElement("p");
+    let p = document.createElement("p");
     p.textContent = noteInput.value;
-    notesList.appendChild(p);
+    document.getElementById("notes-list").appendChild(p);
     noteInput.value = "";
   }
 });
@@ -79,32 +71,13 @@ new Chart(ctx, {
   },
   options: {
     scales: {
-      x: {
-        ticks: {
-          color: "#fff",
-        },
-        grid: {
-          color: "#444",
-        },
-      },
-      y: {
-        ticks: {
-          color: "#fff",
-        },
-        grid: {
-          color: "#444",
-        },
-      },
+      x: { ticks: { color: "#fff" }, grid: { color: "#444" } },
+      y: { ticks: { color: "#fff" }, grid: { color: "#444" } },
     },
-    plugins: {
-      legend: {
-        labels: {
-          color: "#fff",
-        },
-      },
-    },
+    plugins: { legend: { labels: { color: "#fff" } } },
   },
 });
+
 
 // Timer history
 const timerHistory = [];
