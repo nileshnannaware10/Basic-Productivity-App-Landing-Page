@@ -245,7 +245,6 @@ footer {
   }
 }
 
-
 /* Contact Section */
 #contact {
   background: #000;
@@ -301,11 +300,12 @@ footer {
 #add-todo,
 #start-timer,
 #reset-timer,
-#save-note {
-  width: 120px; /* Adjust width */
-  height: 40px; /* Adjust height */
-  font-size: 1rem; /* Adjust font size */
-  border-radius: 10px; /* Optional: rounded corners */
+#save-note,
+#add-goal {
+  width: 120px;
+  height: 40px;
+  font-size: 1rem;
+  border-radius: 10px;
   padding: 0.5rem;
 }
 
@@ -313,7 +313,7 @@ footer {
 .cta-button {
   padding: 1rem 2rem;
   font-size: 1.2rem;
-  background: linear-gradient(90deg, #007BFF, #00FFAA); /* Gradient background */
+  background: linear-gradient(90deg, #007BFF, #00FFAA);
   color: #fff;
   border: none;
   border-radius: 25px;
@@ -321,21 +321,21 @@ footer {
 }
 
 .cta-button:hover {
-  transform: scale(1.1); /* Add a hover effect */
+  transform: scale(1.1);
 }
 
 /* Reduce empty spaces for PC screens */
 @media (min-width: 1024px) {
   #hero {
-    padding: 1rem; /* Reduce padding */
+    padding: 1rem;
   }
 
   #features {
-    padding: 1rem; /* Reduce padding */
+    padding: 1rem;
   }
 
   .tool {
-    margin: 0.5rem 0; /* Reduce margin */
+    margin: 0.5rem 0;
   }
 
   #timer-history {
