@@ -55,6 +55,16 @@
           <h3>Productivity Graph</h3>
           <p>Track your productivity visually.</p>
         </div>
+        <div class="feature-card">
+          <i class="fas fa-calendar"></i>
+          <h3>Calendar</h3>
+          <p>Integrate your schedule with the app.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-bullseye"></i>
+          <h3>Goal Setting</h3>
+          <p>Set and track your goals.</p>
+        </div>
       </div>
     </section>
 
@@ -76,6 +86,7 @@
         <p id="timer-display">25:00</p>
         <button id="start-timer">Start</button>
         <button id="reset-timer">Reset</button>
+        <div id="timer-history"></div>
       </div>
 
       <!-- Notes App -->
@@ -90,6 +101,20 @@
       <div class="tool" id="graph">
         <h3>Productivity Graph</h3>
         <canvas id="productivity-chart" width="400" height="200"></canvas>
+      </div>
+
+      <!-- Calendar Integration -->
+      <div class="tool" id="calendar">
+        <h3>Calendar</h3>
+        <div id="calendar-view"></div>
+      </div>
+
+      <!-- Goal Setting -->
+      <div class="tool" id="goals">
+        <h3>Goal Setting</h3>
+        <input type="text" id="goal-input" placeholder="Set a goal">
+        <button id="add-goal">Add Goal</button>
+        <ul id="goals-list"></ul>
       </div>
     </section>
 
