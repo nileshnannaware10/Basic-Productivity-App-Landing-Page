@@ -29,6 +29,7 @@ document.getElementById("start-timer").addEventListener("click", () => {
       } else {
         clearInterval(timerInterval);
         timerInterval = null;
+        addTimerToHistory();
       }
     }, 1000);
   }
@@ -78,12 +79,9 @@ new Chart(ctx, {
   },
 });
 
-
-// Timer history
+// Timer History
 const timerHistory = [];
-const timerHistoryContainer = document.createElement("div");
-timerHistoryContainer.id = "timer-history";
-document.getElementById("timer").appendChild(timerHistoryContainer);
+const timerHistoryContainer = document.getElementById("timer-history");
 
 function addTimerToHistory() {
   const elapsedTime = 25 * 60 - timeRemaining;
@@ -105,26 +103,13 @@ function updateTimerHistory() {
   timerHistoryContainer.appendChild(historyList);
 }
 
-// Update timer function to add to history when it reaches zero
-startTimerButton.addEventListener("click", () => {
-  if (!timerInterval) {
-    timerInterval = setInterval(() => {
-      if (timeRemaining > 0) {
-        timeRemaining--;
-        updateTimer();
-      } else {
-        clearInterval(timerInterval);
-        timerInterval = null;
-        addTimerToHistory(); // Add to history when timer finishes
-      }
-    }, 1000);
+// Goal Setting
+document.getElementById("add-goal").addEventListener("click", () => {
+  let goalInput = document.getElementById("goal-input");
+  if (goalInput.value.trim() !== "") {
+    let li = document.createElement("li");
+    li.textContent = goalInput.value;
+    document.getElementById("goals-list").appendChild(li);
+    goalInput.value = "";
   }
-});
-
-// Reset timer also resets the current timing but not history
-resetTimerButton.addEventListener("click", () => {
-  clearInterval(timerInterval);
-  timerInterval = null;
-  timeRemaining = 25 * 60;
-  updateTimer();
 });
