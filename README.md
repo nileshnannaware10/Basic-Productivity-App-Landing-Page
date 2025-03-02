@@ -17,6 +17,6 @@ A web-based productivity application to help users manage tasks, focus better, t
 
 - **Frontend:** HTML, CSS, JavaScript
 - **Libraries/Frameworks:**
-  - [Font Awesome](https://fontawesome.com/) for icons
-  - [Chart.js](https://www.chartjs.org/) for visualizing data
+  - [Font Awesome](https://fontawesome.com/) for icons.
+  - [Chart.js](https://www.chartjs.org/) for visualizing data.
 
