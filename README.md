@@ -1,6 +1,6 @@
 # Basic Productivity App Landing Page
 
-A web-based productivity application to help users manage tasks, focus better, take notes, and track productivity through visualizations. The app is optimized for desktop and mobile usage, making it easy to stay productive on any device.
+A web-based productivity application to help users manage tasks, focus better, take notes, and track productivity through visualizations.
 
 ## Features
 
